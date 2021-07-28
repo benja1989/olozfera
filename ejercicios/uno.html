@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Uno</title>
+  </head>
+  <body>
+
+    <section class="container-fluid">
+        <div class="col-10 offset-1">
+            <div class="col-12"><h2>Ejercicio 1</h2></div>
+            <div class="col-12">
+                <ul>
+                    <li>Crear un formulario con 3 campos:campaña, medio, fuente.</li>
+                    <li>Crear un script en js que capture las variables recibidas via GET (?utm_source=campaña&utm_medium=medio&utm_campaign=fuente)</li>
+                    <li>Rellenar el formulario con las siguientes acciones: <br>Asignar el valor de la variable GET utm_source en el campo del formulario "Campaña".<br>Asignar el valor de la variable GET utm_medium en el campo del formulario "Medio".<br>Asignar el valor de la variable GET utm_campaign en el campo del formulario "Fuente".</li>
+                </ul>
+            </div>
+
+            <div class="col-12">
+                <form>
+                    <div class="mb-3">
+                        <label for="campana" class="form-label">Campaña</label>
+                        <input type="text" name="utm_source" value="" class="form-control" id="campana" >
+                      </div>
+                      <div class="mb-3">
+                        <label for="medio" class="form-label">Medio</label>
+                        <input type="text" name="utm_medium"  value="" class="form-control" id="medio" >
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="fuente" class="form-label">Fuente</label>
+                        <input type="text" name="utm_campaign" value="" class="form-control" id="fuente" >
+                      </div>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                  </form>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script>
+        function load() {
+            ///cargamos la URL
+            let url = window.location.href;
+            //buscamos los parametros
+            let params = (new URL(url)).searchParams;
+            //asignamos los parametros al formulario
+            document.getElementById('campana').value=params.get('utm_source');
+            document.getElementById('medio').value=params.get('utm_medium');
+            document.getElementById('fuente').value=params.get('utm_campaign');
+      }
+      window.onload = load;
+    </script>
+  </body>
+</html>

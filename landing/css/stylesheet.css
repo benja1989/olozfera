@@ -1,0 +1,217 @@
+@font-face {
+    font-family: 'ProximaNova';
+    src: url('font/ProximaNova-Semibold.eot');
+    src: url('font/ProximaNova-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('font/ProximaNova-Semibold.woff2') format('woff2'),
+        url('font/ProximaNova-Semibold.woff') format('woff'),
+        url('font/ProximaNova-Semibold.ttf') format('truetype'),
+        url('font/ProximaNova-Semibold.svg#ProximaNova-Semibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Proxima Nova Rg';
+    src: url('font/ProximaNova-Regular.eot');
+    src: url('font/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/ProximaNova-Regular.woff2') format('woff2'),
+        url('font/ProximaNova-Regular.woff') format('woff'),
+        url('font/ProximaNova-Regular.ttf') format('truetype'),
+        url('font/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('font/OpenSans-Bold.eot');
+    src: url('font/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/OpenSans-Bold.woff2') format('woff2'),
+        url('font/OpenSans-Bold.woff') format('woff'),
+        url('font/OpenSans-Bold.ttf') format('truetype'),
+        url('font/OpenSans-Bold.svg#OpenSans-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham Rounded';
+    src: url('font/GothamRounded-Light.eot');
+    src: url('font/GothamRounded-Light.eot?#iefix') format('embedded-opentype'),
+        url('font/GothamRounded-Light.woff2') format('woff2'),
+        url('font/GothamRounded-Light.woff') format('woff'),
+        url('font/GothamRounded-Light.ttf') format('truetype'),
+        url('font/GothamRounded-Light.svg#GothamRounded-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+body{
+    font-size:15px;
+    padding: 0px;
+    margin: 0px;
+    color: white;;
+}
+h1{
+    font-family: 'Gotham Rounded';
+    font-size: 3rem;
+    letter-spacing: 3px;
+    color: white;
+}
+h2{
+    font-family: 'Open Sans';
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.1rem;
+}
+header{
+    height: 800px;
+    background-image: url(../image/bg-header.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 15px;
+}
+.logo{
+    margin-bottom: 20%;
+}
+.logo img{
+    display: inline;
+    width: 50px;
+}
+.logo figcaption{
+    display: inline;
+    color: white;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+p{
+    text-align: justify;
+}
+.boton{
+    margin: 25px 0px;
+    color: white;
+    font-family: 'ProximaNova';
+    padding: 15px 35px;
+    border: solid 1px white;
+    font-size: .8rem;
+    background-color: transparent;
+}
+.boton:hover{
+    color: black;
+    background-color: white;
+}
+hr{
+    opacity: 1;
+    width: 20px;
+}
+.hr-dark{
+    background-color: black;
+    opacity: 1;
+    width: 20px;
+    margin-left: 15px;
+}
+
+#our-services{
+    padding: 100px 0px;
+    background-color: #f6f6f6;
+    color:#333333;
+}
+
+#our-works{
+    padding: 50px 0px;
+    background-color: #ffffff;
+    color:#333333;
+}
+#projects{
+    padding: 200px 0px;
+    background-color: #28282e;
+}
+#projects h2{
+    margin-top: 50px;
+}
+#projects p{
+    text-align: unset;
+    font-size: 1rem;
+    margin-right: 30px;
+}
+.icon-device{
+    cursor: pointer;
+    opacity: 0.4;
+}
+.icon-device:hover{
+    opacity: 1;
+}
+
+#read-our-minds{
+    padding: 100px 0px;
+    background-color: white;
+    color: #28282e;
+}
+table{
+    margin-top: 50px;
+    font-family: 'Proxima Nova Rg';
+    color: #28282e;
+}
+tr{
+    color: #28282e;
+    opacity: .5;
+}
+td{
+    padding: 20px 50px 20px 0px;
+    
+}
+tr:hover{
+    background-image:url(../image/bg-tr.jpg);
+    color: white;
+    opacity: 1;
+}
+
+.all-article{
+    text-decoration: none;
+    color: #ef443a;
+}
+#who-are-we{
+    padding: 100px 0px;
+    background-color: #f6f6f6;
+    color: #333333;
+}
+
+mark{
+    color: #ef443a;
+    background-color: transparent;
+}
+mark::before{
+    display: inline-block;
+    content: "";
+    border-top: .2rem solid black;
+    width: 1rem;
+    margin: -.7rem 0.4rem;
+    transform: translateY(-1rem);
+}
+#gallery{
+    padding: 100px 0px;
+    background-color: #28282e;
+}
+.talk{
+    text-align: center;
+    padding: 30px 0px;
+    background-color: #ef4035;
+}
+footer{
+    padding: 50px 0px;
+    background-color: #28282e;
+    color: #76767b;
+}
+footer a{
+    color: #76767b;
+    text-decoration: none;
+}
+footer a:hover{
+    color: white;
+}

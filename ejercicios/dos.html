@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Dos</title>
+    <style>
+        .contenedor{
+            background-color: lightblue;
+            height: 2500px;
+        }
+        .to-top{
+            position: fixed;
+            top:0%;
+            left:50%;
+        }
+        .to-move{
+            position: fixed;
+            top:50%;
+            width: 100%;
+        }
+
+        .to-bottom{
+            position: fixed;
+            bottom:0px;
+            left:50%;
+        }
+    </style>
+  </head>
+  <body>
+      <a class="btn btn-success to-top" onclick="totop()"> To Top</a>
+      <a class="btn btn-primary to-move" onclick="move()"> move</a>
+      <a class="btn btn-danger to-bottom" onclick="tobottom()"> To bottom</a>
+
+    <div class="contenedor">
+        hello world
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script>
+        var $target = $('html,body'); 
+      function totop(){
+        $target.animate({scrollTop: $target.offset().top}, 200);
+      }
+      function tobottom(){
+        $target.animate({scrollTop: $target.height()}, 200);
+      }
+      function move(){
+          //podriamos tomar el ancho de la pantalla para ver la dimension del boton ya que su tamaño es igual al de la ventana
+          //let ancho=$( window ).width();
+          //o ponedmos obtener el ancho por  medio de su atributo
+          let ancho =$(".to-move").width();
+          alert("el acho del boton es de "+ancho+" px");
+          if(ancho >1024){
+            tobottom()
+            }else{
+                totop()
+            }
+      }
+      
+    </script>
+  </body>
+</html>
