@@ -215,3 +215,108 @@ footer a{
 footer a:hover{
     color: white;
 }
+.diagrama{
+    padding-top: 50px;
+    overflow: scroll;
+}
+.contenedor{
+    width: 830px;
+    height: 150px;
+    position: relative;
+}
+.contenedor2{
+    margin:-25px 90px;
+    width: 830px;
+    height: 150px;
+    position: relative;
+}
+.ocultar{
+    opacity: 0;
+}
+
+.cuadrado{
+    padding-top: 35px;
+    margin-left: 50px;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border: solid 5px white;
+    background-color: white;
+    color: white;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    color: #474747;
+}
+
+.cuadrado:hover{
+    background-color:#28282e;
+    color: white;
+}
+
+.cuadrado figure{
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.cuadrado figcaption{
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+.cuadrado2{
+    padding-top: 35px;
+    margin-left: 50px;
+    display: inline-block;
+    width: 130px;
+    height: 130px;
+    border: solid 5px white;
+    background-color: white;
+    color: white;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    color: #474747;
+    overflow: hidden;
+}
+.cuadrado2:before
+{
+  content: "";
+  position: absolute;
+  width: 180%;
+  height: 180%;
+  top: -40%;
+  left: -40%;
+  z-index: -1;
+  background-image: url(../image/member.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.cuadrado2:before
+{
+  transform: rotate(45deg);
+}
+.pleca{
+    margin: 0 0 0 -65%;
+    width: 150%;
+    height: 150%;
+    transform: rotate(45deg);
+    color: white;
+    background-color:red;
+    display: none;
+}
+
+.cuadrado2:hover .pleca{
+    display: block;
+}
+@media (max-width: 991px) {
+
+   
+  }
