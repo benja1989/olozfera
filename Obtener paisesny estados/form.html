@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleccion </title>
+</head>
+<body>
+<form>
+    <label>País</label>
+    <select name="pais" id="pais" required>
+        <option>Selecciona una opción</option>
+    </select>
+
+    <label>estado</label>
+    <select name="estado" id="estado" required></select>
+
+</form>
+
+<div id="r"></div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+
+        ///archivos JSON con la información
+        const paises ="https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/countries.json";
+        const estados = 'https://raw.githubusercontent.com/dr5hn/countries-states-cities-database/master/states.json';
+
+        ///cargamos el lista de paises
+        $.getJSON(paises,(data,err)=>{
+            data.forEach(element => {
+                $("#pais").append('<option value="'+element.id+'">'+element.name+'</option>');
+            });
+        });
+        //funcion para la obtencion de estados
+        function set_estados(id){
+            $.getJSON(estados,(data,err)=>{
+
+            $("#estado").html("");
+                let state= data.filter(estado=>estado.country_id==id);
+                state.forEach(element => {
+                    $("#estado").append('<option value="'+element.id+'">'+element.name+'</option>');
+                });
+            });
+        }
+        ///capturamos cuando cambian de pais
+        $("#pais").change(()=>{
+            set_estados($("#pais").val());
+        });
+    </script>
+</body>
+</html>
